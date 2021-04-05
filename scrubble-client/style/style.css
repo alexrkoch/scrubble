@@ -54,3 +54,13 @@ body {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
+
+.enter-game__input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.enter-game__input-row:not(:first-of-type) {
+  margin-top: 1rem;
+}
