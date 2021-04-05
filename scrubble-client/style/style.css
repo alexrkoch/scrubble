@@ -1,0 +1,66 @@
+/* some boiler plate i stole for resetting browser box style */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.header {
+  background-color: #404040;
+  display: flex;
+  width: 100%;
+  height: 3.2rem;
+}
+
+.header__logo {
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.home-footer {
+  background-color: #404040;
+  width: 100%;
+  height: 3.2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.enter-game {
+  margin: 20px 20px;
+}
+
+.enter-game__description {
+  font-size: 1.2rem;
+}
+
+.enter-game__label {
+  font-size: 1.2rem;
+}
+
+.enter-game__button {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.enter-game__input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.enter-game__input-row:not(:first-of-type) {
+  margin-top: 1rem;
+}
