@@ -22,16 +22,22 @@
     </section>
     <section class="enter-game">
       <p>
-        Start a new game by making up a new Room Code, or enter a room code that
-        your friends already started without you!
+        Start a new game by making up a new Room Code, or enter a Room Code that
+        your "friends" already started without you!
       </p>
-      <label for="room-code">Room Code:</label>
-      <!-- ? add regex to control room code pattern?-->
-      <input type="text" name="room-code" id="room-code" required />
-      <label for="user-name">User Name:</label>
-      <!-- ? add regex to control name pattern?-->
-      <input type="text" name="user-name" id="user-name" required />
+      <form>
+        <label for="room-code">Room Code:</label>
+        <!-- ? add regex to control room code pattern?-->
+        <input type="text" name="room-code" id="room-code" required />
+        <br />
+        <label for="user-name">User Name:</label>
+        <!-- ? add regex to control name pattern?-->
+        <input type="text" name="user-name" id="user-name" required />
+
+        <input type="submit" value="Get your scrubble on, baby!" />
+      </form>
     </section>
+    <footer></footer>
   </body>
   <script src="src/index.js"></script>
 </html>
