@@ -1,3 +1,6 @@
+$base-color: #404040;
+$logo-color: white;
+
 /* some boiler plate i stole for resetting browser box style */
 html {
   box-sizing: border-box;
@@ -17,21 +20,21 @@ body {
 }
 
 .header {
-  background-color: #404040;
+  background-color: $base-color;
   display: flex;
   width: 100%;
   height: 3.2rem;
 }
 
 .header__logo {
-  color: white;
+  color: $logo-color;
   font-weight: 700;
   font-style: italic;
   margin-left: 10px;
 }
 
 .home-footer {
-  background-color: #404040;
+  background-color: $base-color;
   width: 100%;
   height: 3.2rem;
   position: absolute;
@@ -40,27 +43,27 @@ body {
 
 .enter-game {
   margin: 20px 20px;
-}
 
-.enter-game__description {
-  font-size: 1.2rem;
-}
+  &__description {
+    font-size: 1.2rem;
+  }
 
-.enter-game__label {
-  font-size: 1.2rem;
-}
+  &__label {
+    font-size: 1.2rem;
+  }
 
-.enter-game__button {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-}
+  &__button {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
 
-.enter-game__input-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+  &__input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-.enter-game__input-row:not(:first-of-type) {
-  margin-top: 1rem;
+  &__input-row:not(:first-of-type) {
+    margin-top: 1rem;
+  }
 }
