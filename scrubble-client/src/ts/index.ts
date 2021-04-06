@@ -1,7 +1,9 @@
-const type = !PIXI.utils.isWebGLSupported() ? "WebGL" : "canvas";
+import { utils, Application, Graphics } from "pixi.js";
 
-const app = new PIXI.Application({ width: 500, height: 500 });
-const tile = new PIXI.Graphics();
+const type = !utils.isWebGLSupported() ? "WebGL" : "canvas";
+
+const app = new Application({ width: 500, height: 500 });
+const tile = new Graphics();
 tile.beginFill(0xffffff);
 tile.drawRoundedRect(10, 10, 100, 100, 20);
 tile.endFill();
