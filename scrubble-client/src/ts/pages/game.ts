@@ -1,10 +1,10 @@
-import { utils, Application, Graphics } from "pixi.js";
+import { Graphics, Application, utils } from "pixi.js";
 
 const type = !utils.isWebGLSupported() ? "WebGL" : "canvas";
 
 const app = new Application({ width: 500, height: 500 });
 const tile = new Graphics();
-tile.beginFill(0xffffff);
+tile.beginFill(0xFFFF00);
 tile.drawRoundedRect(10, 10, 100, 100, 20);
 tile.endFill();
 app.stage.addChild(tile);

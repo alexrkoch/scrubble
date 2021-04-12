@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- for mobile, no horizontal scrolling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scrubble</title>
+  </head>
+  <body>
+    <header class="header">
+      <p class="header__logo">Scrubble</p>
+    </header>
+    <section class="banner">
+      <h2 class="banner__home">Home</h2>
+      <!-- link to the future "how to play" page -->
+      <a class="banner__how-to-play" href="">How to Play</a>
+    </section>
+    <section class="enter-game">
+      <p class="enter-game__description">
+        Start a new game by making up a new Room Code, or enter a Room Code that
+        your "friends" already started without you!
+      </p>
+      <form class="enter-game__form">
+        <div class="enter-game__input-row">
+          <label class="enter-game__label" for="room-code">Room Code:</label>
+          <!-- ? add regex to control room code pattern?-->
+          <input
+            class="enter-game__input"
+            type="text"
+            name="room-code"
+            id="room-code"
+            required
+          />
+        </div>
+        <div class="enter-game__input-row">
+          <label class="enter-game__label" for="user-name">User Name:</label>
+          <!-- ? add regex to control name pattern?-->
+          <input
+            class="enter-game__input"
+            type="text"
+            name="user-name"
+            id="user-name"
+            required
+          />
+        </div>
+
+        <input
+          class="enter-game__button"
+          type="submit"
+          value="Get your scrubble on, baby!"
+        />
+      </form>
+    </section>
+    <footer class="home-footer"></footer>
+  </body>
+</html>
