@@ -38,7 +38,7 @@ echo "Created backup of webpack configuration at $WEBPACK_CONFIG_BACKUP"
 
 echo "Modifying webpack config"
 # Checks if the pages array is inlined (page names all appear on the same line)
-if grep "pages\s*=\s*\[.*\]" $WEBPACK_CONFIG
+if grep "pages\s*=\s*\[.*\]" $WEBPACK_CONFIG &> /dev/null
 then
 	# Page names appear on the same line, modifying the line in place
 	sed -i "/pages\s*=\s*\[.*\]/s/\]/, \"$PAGE_NAME\"\]/" $WEBPACK_CONFIG
