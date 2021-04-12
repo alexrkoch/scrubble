@@ -1,0 +1,51 @@
+#! /bin/bash
+
+### Utility bash script for adding a new page to the scrubble app
+
+PAGE_NAME="$1"
+WEBPACK_CONFIG='./webpack.config.js'
+WEBPACK_CONFIG_BACKUP="$WEBPACK_CONFIG.bak"
+HTML_DIR='./src/html'
+TS_DIR='./src/ts/pages'
+SASS_DIR='./src/styles/pages'
+
+
+echo "Creating scaffolding for new page: $PAGE_NAME"
+# Handle no value error
+if [[ -z "$PAGE_NAME" ]]; then
+	echo "You must supply a name for the new page"
+	exit 1
+fi
+# Handle page already exists error
+if [[ -f "$HTML_DIR/$PAGE_NAME.html" || -f "$TS_DIR/$PAGE_NAME.ts" || -f "$SASS_DIR/$PAGE_NAME.scss" ]]; then
+	echo "A page with this name already exists in your source code"
+	exit 1
+fi
+
+echo "Creating empty HTML file"
+touch "$HTML_DIR/$PAGE_NAME.html"
+
+echo "Creating empty TS file"
+touch "$TS_DIR/$PAGE_NAME.ts"
+
+echo "Creating empty SASS file"
+touch "$SASS_DIR/$PAGE_NAME.scss"
+# Modify webpack config
+
+# Create a backup file just in case this messes up the webpack config
+cp $WEBPACK_CONFIG "$WEBPACK_CONFIG_BACKUP"
+echo "Created backup of webpack configuration at $WEBPACK_CONFIG_BACKUP"
+
+echo "Modifying webpack config"
+# Checks if the pages array is inlined (page names all appear on the same line)
+if grep "pages\s*=\s*\[.*\]" $WEBPACK_CONFIG
+then
+	# Page names appear on the same line, modifying the line in place
+	sed -i "/pages\s*=\s*\[.*\]/s/\]/, \"$PAGE_NAME\"\]/" $WEBPACK_CONFIG
+
+else
+	# Page names appear on new lines, appending a line to config
+	sed -i "/pages\s*=\s*\[/a '$PAGE_NAME'," $WEBPACK_CONFIG
+fi
+
+npx prettier "$WEBPACK_CONFIG" -w
