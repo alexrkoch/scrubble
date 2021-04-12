@@ -1,2 +1,2 @@
 console.log("Home");
-console.log("Sweet Home");
+console.log("Sweet Home!");

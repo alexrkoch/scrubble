@@ -22,6 +22,7 @@ const entries = pages.reduce(function (acc, val) {
 }, {});
 
 module.exports = {
+  mode: 'development',
   entry: entries,
   module: {
     rules: [
