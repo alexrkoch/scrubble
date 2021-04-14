@@ -5,7 +5,7 @@ const type = !utils.isWebGLSupported() ? "WebGL" : "canvas";
 const app = new Application({ width: 340, height: 340 });
 const tile = new Graphics();
 tile.beginFill(0xffff00);
-tile.drawRoundedRect(10, 10, 100, 100, 20);
+tile.drawRoundedRect(5, 5, 20, 20, 5);
 tile.endFill();
 app.stage.addChild(tile);
 
