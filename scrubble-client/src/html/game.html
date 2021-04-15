@@ -1,5 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scrubble</title>
+  </head>
   <body>
-    <div id="pixi-application"></div>
+    <header class="header">
+      <p class="header__logo">Scrubble</p>
+    </header>
+    <section class="room-code">
+      <h2 class="room-code__label">Room Code:</h2>
+      <h2 class="room-code__code">WXYZ</h2>
+    </section>
+    <section class="players">
+      <div
+        class="players__player players__player--current-turn"
+        id="players__1"
+      >
+        <h3 class="players__name" id="players__1-name">Player 1:</h3>
+        <h3 class="players__score" id="players__1-score">24</h3>
+      </div>
+      <div class="players__player" id="players__2">
+        <h3 class="players__name" id="players__2-name">Player 2:</h3>
+        <h3 class="players__score" id="players__2-score">20</h3>
+      </div>
+      <div class="players__player" id="players__3">
+        <h3 class="players__name" id="players__3-name">Player 3:</h3>
+        <h3 class="players__score" id="players__3-score">18</h3>
+      </div>
+      <div class="players__player" id="players__4">
+        <h3 class="players__name" id="players__4-name">Player 4:</h3>
+        <h3 class="players__score" id="players__4-score">28</h3>
+      </div>
+      <div class="players__player" id="players__5">
+        <h3 class="players__name" id="players__5-name">Player 5:</h3>
+        <h3 class="players__score" id="players__5-score">30</h3>
+      </div>
+      <div class="players__player" id="players__6">
+        <h3 class="players__name" id="players__6-name">Player 6:</h3>
+        <h3 class="players__score" id="players__6-score">12</h3>
+      </div>
+    </section>
+    <section class="game-board">
+      <h3 class="game-board__whose-turn">It's Mitch's Turn</h3>
+      <div class="game-board__board" id="pixi-application"></div>
+      <div class="game-board__your-tiles">
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+        <div class="game-board__tile"></div>
+      </div>
+      <h3 class="game-board__your-tiles-label">Your Tiles</h3>
+    </section>
+    <footer class="game-footer">
+      <h3 class="game-footer__your-score">Your Score: 69</h3>
+      <button class="game-footer__button">Submit Word!</button>
+    </footer>
   </body>
 </html>
