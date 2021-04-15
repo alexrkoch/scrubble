@@ -2,6 +2,7 @@ $base-color: #404040;
 $logo-color: white;
 $button-color: lightgray;
 $head-margins: 1rem;
+$border-color: #404040;
 
 html {
   box-sizing: border-box;
@@ -56,14 +57,13 @@ body {
 
 .players {
   width: 100%;
-  max-height: 200px;
+  max-height: 170px;
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   align-content: center;
 
   &__name {
@@ -77,14 +77,16 @@ body {
     padding-right: 0.25rem;
   }
   &__player {
-    display: inline-flex;
-    border: 1px black solid;
+    width: 40%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px $border-color solid;
     margin: 0.25rem;
-  }
-  &__current-turn {
-    display: inline-flex;
-    border: 4px black solid;
-    margin: 0.25rem;
+    &--current-turn {
+      border: 4px $border-color solid;
+    }
   }
 }
 
