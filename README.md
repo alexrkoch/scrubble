@@ -1,5 +1,5 @@
 # scrubble
-Scrubble the game, TM Mishie and Halx
+Scrubble the game: slappin' down tiles and scorin' points.
 
 # About:
 
