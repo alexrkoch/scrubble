@@ -22,7 +22,7 @@ const entries = pages.reduce(function (acc, val) {
 }, {});
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: entries,
   module: {
     rules: [
@@ -42,6 +42,10 @@ module.exports = {
   },
   optimization: {
     usedExports: true,
+  },
+  resolve: {
+    mainFiles: ["index"],
+    extensions: [".ts", ".js"],
   },
   plugins: [
     new MiniCssExtractPlugin(),
