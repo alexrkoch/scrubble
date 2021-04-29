@@ -27,27 +27,13 @@
   align-items: center;
   align-content: center;
 
-  &__name {
-    line-height: 0.2;
-    padding-left: 0.25rem;
-    padding-right: 0.5rem;
-  }
-  &__score {
-    font-weight: 400;
-    line-height: 0.2;
-    padding-right: 0.25rem;
-  }
   &__player {
     width: 40%;
     height: 2.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px $border-color solid;
     margin: 0.25rem;
-    &--current-turn {
-      border: 4px $border-color solid;
-    }
   }
 }
 
