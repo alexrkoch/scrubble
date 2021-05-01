@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 const PathType = Object.freeze({
@@ -50,6 +49,7 @@ module.exports = {
     extensions: [".ts", ".js"],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     ...pages.map(
       (pageName) =>
@@ -60,11 +60,5 @@ module.exports = {
           chunks: [pageName],
         })
     ),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      context: "node_modules/@webcomponents/webcomponentsjs",
-      from: "**/*.js",
-      to: "webcomponents",
-    }),
   ],
 };

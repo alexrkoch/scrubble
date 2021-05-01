@@ -1,3 +1,5 @@
+import "../components/PlayerScore";
+
 import { Application, utils } from "pixi.js";
 import { GameGrid } from "../components";
 

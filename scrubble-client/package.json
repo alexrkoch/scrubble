@@ -2,7 +2,6 @@
   "name": "scrubble-client",
   "version": "1.0.0",
   "description": "TODO: Make README",
-  "sideEffects": false,
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,7 +27,6 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "lit-element": "^2.4.0",
     "pixi.js": "^6.0.2"
   }
 }
